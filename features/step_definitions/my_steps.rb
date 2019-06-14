@@ -21,3 +21,9 @@ end
 Then(/^I see the puppy "([^"]*)" is in my litter$/) do |expected_name|
   expect(@browser.h2(text: "#{expected_name}:")).to exist
 end
+
+Given(/^I have added a puppy to my litter$/) do
+  step 'I am on the home page'
+  step 'I click on the puppy "Brook"'
+  step 'I click on "Adopt Me!"'
+end
