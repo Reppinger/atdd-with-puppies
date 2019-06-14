@@ -34,4 +34,4 @@ features/step_definitions/*
 #*.iml
 
 ## Directory-based project format:
-#.idea/
+.idea/
