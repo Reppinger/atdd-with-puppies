@@ -27,3 +27,11 @@ Given(/^I have added a puppy to my litter$/) do
   step 'I click on the puppy "Brook"'
   step 'I click on "Adopt Me!"'
 end
+
+When(/^I add a Collar & Leash to my order$/) do
+  @browser.checkbox(id: 'collar').set(true)
+end
+
+And(/^I add a Chew Toy to my order$/) do
+  @browser.checkbox(id: 'toy').set(true)
+end
