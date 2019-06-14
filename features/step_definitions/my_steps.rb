@@ -17,3 +17,7 @@ end
 Then(/^I see the home page$/) do
   expect(@browser.h1(text: 'Puppy List')).to exist
 end
+
+Then(/^I see the puppy "([^"]*)" is in my litter$/) do |expected_name|
+  expect(@browser.h2(text: "#{expected_name}:")).to exist
+end
