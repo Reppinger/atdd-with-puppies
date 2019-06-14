@@ -1,5 +1,5 @@
 # exclude everything
-features/step_definitions/*
+#features/step_definitions/*
 
 # exception to the rule
 !features/step_definitions/.gitkeep 
