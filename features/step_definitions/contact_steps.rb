@@ -11,12 +11,17 @@ end
 
 When(/^the contact form is completely filled in$/) do
   steps %Q{
-      And I fill the form in with the following values:
+      When I fill the form in with the following values:
       | name        | email           | message                                            |
       | Joe Sixpack | joe@sixpack.com | I am having trouble adopting a puppy. Please help! |
   }
 end
 
 When(/^I blank out "([^"]*)"$/) do |element_id|
-  @browser.element(id: element_id).wd.clear
+  element = @browser.element(id: element_id).wd
+  if element.tag_name == 'select'
+    @browser.select(id: element_id).select_value('')
+  else
+    element.clear
+  end
 end

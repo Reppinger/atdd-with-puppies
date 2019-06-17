@@ -70,5 +70,3 @@ Feature: As a dog lover
       | order_address  | Address can't be blank  |
       | order_email    | Email can't be blank    |
       | order_pay_type | Pay type can't be blank |
-
-

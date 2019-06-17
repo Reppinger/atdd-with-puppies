@@ -43,3 +43,11 @@ When(/^I fill the order form in with the following values:$/) do |order_table|
   @browser.text_field(id: 'order_email').set(order['email'])
   @browser.select(id: 'order_pay_type').select(order['pay_type'])
 end
+
+And(/^the order form is completely filled in$/) do
+  steps %Q{
+    When I fill the order form in with the following values:
+      | name        | address      | email           | pay_type |
+      | Joe Sixpack | 123 Main St. | joe@sixpack.com | Check    |
+  }
+end
