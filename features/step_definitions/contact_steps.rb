@@ -3,10 +3,9 @@ When(/^I click on the email icon$/) do
 end
 
 When(/^I fill the form in with the following values:$/) do |form_values|
+  contact_page = ContactPage.new(@browser)
   contact = form_values.hashes.first
-  @browser.text_field(id: 'contact_message_name').set(contact['name'])
-  @browser.text_field(id: 'contact_message_email').set(contact['email'])
-  @browser.textarea(id: 'contact_message_body').set(contact['message'])
+  contact_page.fill_form(contact)
 end
 
 When(/^the contact form is completely filled in$/) do
