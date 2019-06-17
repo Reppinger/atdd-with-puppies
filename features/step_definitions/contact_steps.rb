@@ -25,3 +25,8 @@ When(/^I blank out "([^"]*)"$/) do |element_id|
     element.clear
   end
 end
+
+
+Then(/^I see the heading "([^"]*)"$/) do |expected_heading|
+  expect(@browser.html.include?(expected_heading)).to eq true
+end
