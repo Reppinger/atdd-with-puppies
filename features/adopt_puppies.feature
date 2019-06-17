@@ -50,12 +50,9 @@ Feature: As a dog lover
   Scenario: #8 Complete an adoption
     Given I have added a puppy to my litter
     When I click on "Complete the Adoption"
-    And I fill the form in with the following values:
-      | element        | value           |
-      | order_name     | Joe Sixpack     |
-      | order_address  | 123 Main St.    |
-      | order_email    | joe@sixpack.com |
-      | order_pay_type | Check           |
+    And I fill the order form in with the following values:
+      | name        | address      | email           | pay_type |
+      | Joe Sixpack | 123 Main St. | joe@sixpack.com | Check    |
     And I click on "Place Order"
     Then I see "Thank you for adopting a puppy!"
 

@@ -10,7 +10,7 @@ Then(/^I see "([^"]*)"$/) do |expected_text|
   expect(@browser.html.include?(expected_text)).to eq true
 end
 
-And(/^I click on "([^"]*)"$/) do |button_text|
+When(/^I click on "([^"]*)"$/) do |button_text|
   @browser.button(text: button_text).click
 end
 
@@ -32,6 +32,14 @@ When(/^I add a Collar & Leash to my order$/) do
   @browser.checkbox(id: 'collar').set(true)
 end
 
-And(/^I add a Chew Toy to my order$/) do
+When(/^I add a Chew Toy to my order$/) do
   @browser.checkbox(id: 'toy').set(true)
+end
+
+When(/^I fill the order form in with the following values:$/) do |order_table|
+  order = order_table.hashes.first
+  @browser.text_field(id: 'order_name').set(order['name'])
+  @browser.textarea(id: 'order_address').set(order['address'])
+  @browser.text_field(id: 'order_email').set(order['email'])
+  @browser.select(id: 'order_pay_type').select(order['pay_type'])
 end
