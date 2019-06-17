@@ -11,8 +11,8 @@ Feature: As a user of the site
     Given I am on the home page
     When I click on the email icon
     And I fill the form in with the following values:
-      | contact_message_name | contact_message_email | contact_message_body                               |
-      | Joe Sixpack          | joe@sixpack.com       | I am having trouble adopting a puppy. Please help! |
+      | name        | email           | message                                            |
+      | Joe Sixpack | joe@sixpack.com | I am having trouble adopting a puppy. Please help! |
     And I click on "Send"
     Then I see "Thank you for contacting us!"
 
