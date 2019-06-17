@@ -28,5 +28,6 @@ end
 
 
 Then(/^I see the heading "([^"]*)"$/) do |expected_heading|
-  expect(@browser.html.include?(expected_heading)).to eq true
+  page = ContactPage.new(@browser)
+  expect(page.heading_displayed?(expected_heading)).to eq true
 end
