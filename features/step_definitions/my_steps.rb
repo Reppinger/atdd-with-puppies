@@ -57,3 +57,8 @@ And(/^the cart is empty$/) do
   home_page = HomePage.new(@browser)
   expect(home_page.empty_cart?).to eq true
 end
+
+Then(/^an adoption confirmation is displayed$/) do
+  home_page = HomePage.new(@browser)
+  expect(home_page.order_confirmed?).to eq true
+end

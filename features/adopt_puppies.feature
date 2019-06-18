@@ -54,7 +54,7 @@ Feature: As a dog lover
       | name        | address      | email           | pay_type |
       | Joe Sixpack | 123 Main St. | joe@sixpack.com | Check    |
     And I click on "Place Order"
-    Then I see "Thank you for adopting a puppy!"
+    Then an adoption confirmation is displayed
 
   Scenario Outline: #9 All fields are required to complete an adoption
     Given I have added a puppy to my litter
