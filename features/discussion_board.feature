@@ -11,13 +11,11 @@ Feature: As a user of the site
 
   @data_purge
   Scenario: #2 Create a new topic thread
-    When I click on "Post a Message"
-    And I fill the form in with the following values:
-      | element                  | value                 |
-      | discussion_post_nickname | goldeneye1942         |
-      | discussion_post_body     | Goldens are the best! |
+    When I post the message:
+      | nickname      | body                  |
+      | goldeneye1942 | Goldens are the best! |
     And I click on "Post"
-    Then I see a post with the message "Goldens are the best!"
+    Then the post with "Goldens are the best!" is displayed
 
   @data_purge
   Scenario: #3 Create a reply to a thread
