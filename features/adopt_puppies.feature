@@ -62,7 +62,7 @@ Feature: As a dog lover
     And the order form is completely filled in
     But I blank out "<element>"
     And I click on "Place Order"
-    Then I see "<error>"
+    Then the error "<error>" is displayed
 
     Examples:
       | element        | error                   |

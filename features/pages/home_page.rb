@@ -12,10 +12,16 @@ class HomePage
   end
 
   def empty_cart?
-    @browser.p(id: 'notice').text == 'Your cart is currently empty'
+    notice_text == 'Your cart is currently empty'
   end
 
   def order_confirmed?
-    @browser.p(id: 'notice').text == 'Thank you for adopting a puppy!'
+    notice_text == 'Thank you for adopting a puppy!'
+  end
+
+  private
+
+  def notice_text
+    @browser.p(id: 'notice').text
   end
 end
