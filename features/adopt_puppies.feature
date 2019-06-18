@@ -38,7 +38,7 @@ Feature: As a dog lover
     And I click on "Adopt Me!"
     When I click on "Change Your Mind"
     Then I see the home page
-    And I see "Your cart is currently empty"
+    And the cart is empty
 
 #  @not_ready
   Scenario: #7 Add accessories to a puppy and the price change is reflected

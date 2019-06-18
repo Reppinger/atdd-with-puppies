@@ -52,3 +52,8 @@ And(/^the order form is completely filled in$/) do
       | Joe Sixpack | 123 Main St. | joe@sixpack.com | Check    |
   }
 end
+
+And(/^the cart is empty$/) do
+  home_page = HomePage.new(@browser)
+  expect(home_page.empty_cart?).to eq true
+end

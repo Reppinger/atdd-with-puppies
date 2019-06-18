@@ -5,6 +5,6 @@ class PuppyDetailsPage
   end
 
   def adopt_me_displayed?
-    @browser.html.include?('Adopt Me!')
+    @browser.button(text: 'Adopt Me!').enabled?
   end
 end
