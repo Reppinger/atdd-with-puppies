@@ -1,9 +1,9 @@
 Given(/^I am on the home page$/) do
-  @browser.goto 'http://localhost:3000'
+  HomePage.new(@browser).visit
 end
 
 When(/^I click on the puppy "([^"]*)"$/) do |name|
-  @browser.div(text: name).parent.button(text: 'View Details').click
+  HomePage.new(@browser).view_puppy_details name
 end
 
 Then(/^I see "([^"]*)"$/) do |expected_text|
