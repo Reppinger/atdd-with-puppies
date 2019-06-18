@@ -45,7 +45,7 @@ Feature: As a dog lover
     Given I have added a puppy to my litter
     When I add a Collar & Leash to my order
     And I add a Chew Toy to my order
-    Then I see "$63.93"
+    Then the order total is "$63.93"
 
   Scenario: #8 Complete an adoption
     Given I have added a puppy to my litter
