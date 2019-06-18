@@ -6,8 +6,9 @@ When(/^I click on the puppy "([^"]*)"$/) do |name|
   HomePage.new(@browser).view_puppy_details name
 end
 
-Then(/^I see "([^"]*)"$/) do |expected_text|
-  expect(@browser.html.include?(expected_text)).to eq true
+Then(/^the puppy can be adopted$/) do
+  page = PuppyDetailsPage.new(@browser)
+  expect(page.adopt_me_displayed?).to eq true
 end
 
 When(/^I click on "([^"]*)"$/) do |button_text|
