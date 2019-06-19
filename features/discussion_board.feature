@@ -1,11 +1,10 @@
-@ignore
 Feature: As a user of the site
   I want to be able to have online discussions
   So that I can learn from other dog enthusiasts
 
   Background:
     Given I am on the home page
-    And I click on "Message Boards"
+    And I visit the Message Boards
 
   Scenario: #1 Can access the Message Boards
     Then I see the heading "Message Boards"

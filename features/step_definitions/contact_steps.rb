@@ -25,3 +25,8 @@ But(/^I blank out "([^"]*)"$/) do |element_id|
     element.clear
   end
 end
+
+Then(/^I see the heading "([^"]*)"$/) do |heading_text|
+  heading_found = @browser.element(text: heading_text).exists?
+  expect(heading_found).to eq true
+end
