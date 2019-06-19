@@ -18,10 +18,5 @@ And(/^the contact form is completely filled in$/) do
 end
 
 But(/^I blank out "([^"]*)"$/) do |element_id|
-  element = @browser.element(id: element_id).wd
-  if element.tag_name == "select"
-    @browser.select(id: element_id).select_value('')
-  else
-    element.clear
-  end
+  @browser.element(id: element_id).wd.clear
 end

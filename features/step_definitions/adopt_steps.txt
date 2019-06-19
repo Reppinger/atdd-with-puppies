@@ -21,11 +21,3 @@ Given(/^I have added a puppy to my litter$/) do
   step 'I click on the puppy "Brook"'
   step 'I click on "Adopt Me!"'
 end
-
-And(/^the order form is completely filled in$/) do
-  steps %Q{
-      And I fill the form in with the following values:
-      | name        | address      | email           | pay_type |
-      | Joe Sixpack | 123 Main St. | joe@sixpack.com | Check    |
-        }
-end
