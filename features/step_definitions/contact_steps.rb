@@ -26,3 +26,9 @@ Then(/^I see the heading "([^"]*)"$/) do |expected_heading|
   page = ContactPage.new(@browser)
   expect(page.heading_displayed?(expected_heading)).to eq true
 end
+
+
+Then(/^a contact confirmation is displayed$/) do
+  home_page = HomePage.new(@browser)
+  expect(home_page.contact_confirmed?).to eq true
+end

@@ -19,6 +19,10 @@ class HomePage
     notice_text == 'Thank you for adopting a puppy!'
   end
 
+  def contact_confirmed?
+    notice_text == 'Thank you for contacting us!'
+  end
+
   private
 
   def notice_text

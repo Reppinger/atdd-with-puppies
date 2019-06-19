@@ -14,7 +14,7 @@ Feature: As a user of the site
       | name        | email           | message                                            |
       | Joe Sixpack | joe@sixpack.com | I am having trouble adopting a puppy. Please help! |
     And I click on "Send"
-    Then I see "Thank you for contacting us!"
+    Then a contact confirmation is displayed
 
   Scenario Outline: #3 All fields are required to send a message to the agency
     When the contact form is completely filled in
